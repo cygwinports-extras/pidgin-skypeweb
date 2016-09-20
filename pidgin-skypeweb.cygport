@@ -1,0 +1,15 @@
+inherit cmake
+
+NAME="pidgin-skypeweb"
+VERSION=1.2.1
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="Skype Web protocol plugin for Pidgin"
+DESCRIPTION="Adds a 'Skype (HTTP)' protocol to the Pidgin accounts list."
+HOMEPAGE="https://github.com/EionRobb/skype4pidgin"
+SRC_URI="https://github.com/EionRobb/skype4pidgin/archive/${VERSION}/skype4pidgin-${VERSION}.tar.gz"
+SRC_DIR="skype4pidgin-${VERSION}/skypeweb"
+PATCH_URI="
+	1.2.1-cmake-module.patch
+	1.2.1-zlib.patch
+"

@@ -1,0 +1,26 @@
+--- origsrc/skype4pidgin-1.2.1/skypeweb/CMakeLists.txt	2016-08-08 02:32:12.000000000 -0500
++++ src/skype4pidgin-1.2.1/skypeweb/CMakeLists.txt	2016-09-19 12:13:13.237342100 -0500
+@@ -13,6 +13,7 @@ set(CMAKE_MODULE_PATH
+     )
+ 
+ find_package(PkgConfig REQUIRED)
++find_package(ZLIB REQUIRED)
+ 
+ pkg_check_modules(GLIB REQUIRED  glib-2.0)
+ pkg_check_modules(JSON-GLIB REQUIRED json-glib-1.0)
+@@ -24,6 +25,7 @@ include_directories(
+     ${PURPLE_INCLUDE_DIRS}
+     ${GLIB2_INCLUDE_DIRS}
+     ${JSON-GLIB_INCLUDE_DIRS}
++    ${ZLIB_INCLUDE_DIRS}
+     ${CMAKE_CURRENT_BINARY_DIR}
+     ${CMAKE_CURRENT_SOURCE_DIR}
+     )
+@@ -43,6 +45,7 @@ set(SRC_LIST
+     ${PURPLE_LIBRARIES}
+     ${GLIB2_LIBRARIES}
+     ${JSON-GLIB_LIBRARIES}
++    ${ZLIB_LIBRARIES}
+     )
+ 
+ link_directories(
