@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="pidgin-skypeweb"
-VERSION=1.2.2
+VERSION=1.4
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Skype Web protocol plugin for Pidgin"
